@@ -26,8 +26,6 @@ runs:
         path: |
           ~/vcpkg
           ./build/vcpkg_installed
-          ${{ env.CONAN_USER_HOME }}
-          ~/.cache/pip
           ${{ env.HOME }}/.cache/vcpkg/archives
           ${{ env.XDG_CACHE_HOME }}/vcpkg/archives
           ${{ env.LOCALAPPDATA }}\vcpkg\archives

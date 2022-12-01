@@ -11,9 +11,9 @@ on:
 
 env:
   # Conan cache environment variables
-  CONAN_SYSREQUIRES_MODE: enabled
-  CONAN_USER_HOME: "${{ github.workspace }}/conan-cache"
-  CONAN_USER_HOME_SHORT: "${{ github.workspace }}/conan-cache/short"
+#  CONAN_SYSREQUIRES_MODE: enabled
+#  CONAN_USER_HOME: "${{ github.workspace }}/conan-cache"
+#  CONAN_USER_HOME_SHORT: "${{ github.workspace }}/conan-cache/short"
   CLANG_TIDY_VERSION: "13.0.0"
 
 jobs:
@@ -126,8 +126,8 @@ jobs:
 
           cmake: true
           ninja: true
-          conan: true
-          vcpkg: false
+          conan: false
+          vcpkg: true
           ccache: true
           clangtidy: ${{ env.CLANG_TIDY_VERSION }}
 
@@ -137,9 +137,9 @@ jobs:
           gcovr: true
           opencppcoverage: true
 
-      - name: Cleanup Conan system packages (they are not properly cached)
-        run: |
-          conan remove -f '*/system'
+#      - name: Cleanup Conan system packages (they are not properly cached)
+#        run: |
+#          conan remove -f '*/system'
 
         # make sure coverage is only enabled for Debug builds, since it sets -O0 to make sure coverage
         # has meaningful results
