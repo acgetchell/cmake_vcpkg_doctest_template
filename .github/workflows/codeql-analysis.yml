@@ -21,7 +21,7 @@ on:
     - cron: '38 0 * * 5'
 
 env:
-
+  CLANG_TIDY_VERSION: "13.0.0"
 
 jobs:
   analyze:
