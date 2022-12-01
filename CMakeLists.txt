@@ -18,7 +18,7 @@ set(ENABLE_DEVELOPER_MODE
     CACHE BOOL "Enable 'developer mode'")
 
 # Change this to false if you want to disable warnings_as_errors in developer mode
-set(OPT_WARNINGS_AS_ERRORS_DEVELOPER_DEFAULT TRUE)
+set(OPT_WARNINGS_AS_ERRORS_DEVELOPER_DEFAULT FALSE)
 
 # Add project_options v0.20.0
 # https://github.com/cpp-best-practices/project_options
@@ -29,7 +29,7 @@ include(${_project_options_SOURCE_DIR}/Index.cmake)
 
 # uncomment to enable vcpkg:
 # # Setup vcpkg - should be called before defining project()
-# run_vcpkg()
+run_vcpkg()
 
 # Set the project name and language
 project(
@@ -103,7 +103,7 @@ dynamic_project_options(
   PCH_HEADERS
   <vector>
   <string> # This is a list of headers to pre-compile, here are some common ones
-  ENABLE_CONAN
+  # ENABLE_CONAN
   # CONAN_OPTIONS    # Extra options to pass to conan
   # MSVC_WARNINGS    # Override the defaults for the MSVC warnings
   # CLANG_WARNINGS   # Override the defaults for the CLANG warnings

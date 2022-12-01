@@ -1,0 +1,10 @@
+{
+  "name": "cmake-vcpkg-doctest-template",
+  "version": "0.0.1",
+  "dependencies": [
+    "cli11",
+    "doctest",
+    "fmt",
+    "spdlog"
+  ]
+}

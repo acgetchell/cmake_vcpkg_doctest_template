@@ -1,4 +1,4 @@
-#include <catch2/catch.hpp>
+#include <doctest/doctest.h>
 
 constexpr unsigned int Factorial(unsigned int number)// NOLINT(misc-no-recursion)
 {
