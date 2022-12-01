@@ -2,7 +2,7 @@
 build/
 out/
 cmake-build-*/
-conan-cache/
+vcpkg_installed/
 
 # User spesific settings
 CMakeUserPresets.json
