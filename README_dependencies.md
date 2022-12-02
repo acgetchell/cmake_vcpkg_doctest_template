@@ -29,7 +29,7 @@ RefreshEnv.cmd # reload the environment
 ```
 
 ### Necessary Dependencies
-1. A C++ compiler that supports C++17.
+1. A C++ compiler that supports C++20.
 See [cppreference.com](https://en.cppreference.com/w/cpp/compiler_support)
 to see which features are supported by each compiler.
 The following compilers should work:
@@ -103,21 +103,22 @@ The following compilers should work:
 	</details>
 
 
-2. [Conan](https://conan.io/)
+2. [vcpkg](https://vcpkg.io/)
 	<details>
 	<summary>Install Command</summary>
 
-	- Via pip - https://docs.conan.io/en/latest/installation.html#install-with-pip-recommended
+	Step 1. Clone the vcpkg repo:
 
-			pip install --user conan
+			git clone https://github.com/Microsoft/vcpkg.git
+
+	Step 2. Run the bootstrap script to build vcpkg:
+	- Linux/MacOS:
+
+			./vcpkg/bootstrap-vcpkg.sh
 
 	- Windows:
 
-			choco install conan -y
-
-	- MacOS:
-
-			brew install conan
+			.\vcpkg\boostrap-vcpkg.bat
 
 	</details>
 
